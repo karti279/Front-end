@@ -15,9 +15,11 @@ spec:
       labels:
         role: frontend
     spec:
+      imagePullSecrets:
+      - name: docker-registry-secret
       containers:
       - name: frontend
-        image: persevcareers6577/perseverance-project:VERSION
+        image: karthik279/project:VERSION
         ports:
         - containerPort: 3000
 ---
